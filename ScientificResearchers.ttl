@@ -1,0 +1,46 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix srs: <http://dbpedia.org/ontology/srs#> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#>.
+
+<http://dbpedia.org/ontology/srs#> a owl:Ontology ;
+    dcterms:title "cherchers scientifiques" .
+
+srs:Researcher a rdfs:Class ;
+    rdfs:label "Researcher" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:Laboratory a rdfs:Class ;
+    rdfs:label "Laboratory" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:ResearchTeam a rdfs:Class ;
+    rdfs:label "ResearchTeam" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:Department a rdfs:Class ;
+    rdfs:label "Département" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:belongsLaboratory a rdf:Property ;
+    rdfs:label "appartient au laboratoire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:belongsDepartment a rdf:Property ;
+    rdfs:label "appartient au département" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+srs:hasTeam a rdf:Property ;
+    rdfs:label "a comme équipe" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
